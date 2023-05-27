@@ -48,13 +48,11 @@ class Solution
     public static Node modifyTheList(Node head)
     {
       
-    //   System.out.println(n);
        Node slow=head;
        Node fast=head;
-    //   Node prev=null;
        while(fast!=null && fast.next!=null)
        {
-        //   prev=slow;
+
            slow=slow.next;
            fast=fast.next.next;
        }
