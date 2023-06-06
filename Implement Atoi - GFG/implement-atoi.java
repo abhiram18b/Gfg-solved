@@ -34,19 +34,10 @@ class Solution
 	    int flag=0;
         if(str.charAt(0)=='-') 
         {
-            for(int i=1;i<str.length();i++)
-            {
-                if(!Character.isDigit(str.charAt(i)))
-                {
-                    flag=1;
-                    return -1;
-                    
-                }
-            }
-            if(flag==0)
-             {
+            if(str.length()>1 && !Character.isDigit(str.charAt(1))) return -1;
+        
                 return -1*num(str.substring(1),0,str.length()-1);
-             }
+             
         }
 	    return num(str,0,str.length());
 	    
